@@ -2,6 +2,7 @@
   text-align: center;
 }
 
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -36,3 +37,20 @@
     transform: rotate(360deg);
   }
 }
+
+.cont{
+  background-color: rgb(101, 186, 207);
+  border-radius: 25px;
+  justify-content: center;
+  margin: 30px;
+  width: auto;
+  display: flex;
+}
+
+body{
+  background-color: rgb(189, 55, 55);
+  color: rgb(13, 73, 97);
+}
+
+  
+

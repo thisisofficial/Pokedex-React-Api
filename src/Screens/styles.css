@@ -1,0 +1,21 @@
+.contain{
+    align-self: center;
+    justify-items: center;
+    width: 70%;
+    background-color: rgb(94, 174, 194);
+    margin: 20px;
+    box-shadow: inset 10px 10px 10px rgb(101, 186, 207), inset -10px -10px 10px rgb(101, 186, 207);
+
+}
+
+.titleCont{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
+
+.emphasis{
+    font-weight: 600;
+    font-size: 40px;
+    text-shadow: 0 -10px 10px rgb(101, 186, 207), 0 10px 10px rgb(101, 186, 207);
+}

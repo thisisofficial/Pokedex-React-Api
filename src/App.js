@@ -1,18 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
-import {PokeInfo} from './PokeInfo.js';
-import {Loader} from './loadercard.js';
-import {Error} from './error.js';
+import {PokeInfo, PokeList, Error} from './Screens';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import {NavBar} from './Components/NavBar';
 
 function App() {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<Loader/>} />
-        <Route path="/Pokemon/:name" element={<PokeInfo/>} />
-        <Route path="*" element={<Error/>}/>
-      </Routes>
+      <NavBar/>
+        <div className='cont'>
+          <Routes>
+            <Route path="/" element={<PokeList/>} />
+            <Route path="/Pokemon" element={<PokeInfo/>} />
+            <Route path="*" element={<Error/>}/>
+          </Routes>
+        </div>
     </Router>
   );
 }

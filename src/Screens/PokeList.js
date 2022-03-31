@@ -1,9 +1,10 @@
-import {Card} from './Card.js';
+import {Card} from '../Components/Card.js';
 import { useEffect, useState } from 'react';
 import React from 'react';
 import {Link } from 'react-router-dom';
+import './styles.css';
 
-export function Loader(){
+export function PokeList(){
 
     const [pokemon, setPokemon] = useState([]);
 
@@ -20,12 +21,15 @@ export function Loader(){
     function RenderPokes(item){
         let link = "/Pokemon/"+ item.name;
         return(
-            <Link to={link}> <Card key={item.name} name={item.name}/></Link>
+            <Card key={item.name} name={item.name} url={item.url}/>
         );
     }
     return(
-        <div>
-            <h1>Pokemones</h1>
+        <div className='contain'>
+            <div className='titleCont'>
+                <h1 className='emphasis'>Pokemones</h1>
+            </div>
+            
             <ul>
                 {
                     pokemon.map((item) => RenderPokes(item))
