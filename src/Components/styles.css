@@ -33,7 +33,7 @@
     color: #aaa;
     text-decoration: none;
     padding: 15px;
-    font-size: 23px;;
+    font-size: 23px;
     font-weight: bolder;
     transition: .5s;
     transition-timing-function: ease;
@@ -41,6 +41,7 @@
 .link:hover{
     color: #fff;
     font-size: 28px;
+    padding:10px;
 }
 
 .signarea{

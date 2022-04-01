@@ -1,6 +1,6 @@
 import React from 'react'
 import './styles.css';
-import {Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import logo from './pokeapi.png';
 
 export function NavBar() {
@@ -8,13 +8,19 @@ export function NavBar() {
     <>
       <div className="nav">
         <Link className="logo-container" to='/'>
-          <img className="logo" src={logo}/>
-        </Link> 
+          <img className="logo" src={logo} />
+        </Link>
 
         <div className="links">
-          <Link className="link" to='/'>Home</Link>
-          <Link className="link" to='/Pokemon/charizard'>Charizard</Link>
-          <Link className="link" to='/Pokemon/mewtwo'>Mewtwo</Link>
+          <Link className="link" to='/' state=''>Home</Link>
+          <Link className="link" to={{
+            pathname: '/Pokemon/charizard',
+            state: { pokemon: 'https://pokeapi.co/api/v2/pokemon-species/6/' }
+          }}>Charizard</Link>
+          <Link className="link"  to={{
+            pathname: '/Pokemon/mewtwo',
+            state: { pokemon: 'https://pokeapi.co/api/v2/pokemon-species/150/' }
+          }}>Mewtwo</Link>
         </div>
 
         <div className='signarea'>

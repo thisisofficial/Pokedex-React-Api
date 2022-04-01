@@ -1,40 +1,29 @@
 import { useEffect, useState } from 'react';
 import React from 'react';
-import { useParams} from 'react-router-dom';
-import {PokeCard} from '../Components/PokeCard.js'
+import { useParams } from 'react-router-dom';
+import { PokeCard } from '../Components/PokeCard.js'
 
-export function PokeInfo(props){
-    let {name} = useParams();
-    let link = "";   
-        link = "https://pokeapi.co/api/v2/pokemon/"+name;  
+export function PokeInfo() {
 
-    const [pokeName, setName] = useState();
-    const [pokeId, setId] = useState();
-    const [pokeWeight, setWeight] = useState();
-    const [pokeHeight, setHeight] = useState();
-    const [pokeSprite, setSprite] = useState();
+    const { name } = useParams();
+    const [pokemon, setPokemon] = useState([]);
 
-    let type = ['fire'];
+
     const fetchPokemon = async () => {
-        const response = await fetch(link);
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
         const PokemonJson = await response.json();
-        setName(PokemonJson.name);
-        setId(PokemonJson.id);
-        setWeight(PokemonJson.weight);
-        setHeight(PokemonJson.height);
-        setSprite(PokemonJson.sprites['other']['official-artwork'].front_default);
-        console.log(PokemonJson);
+        setPokemon(PokemonJson);
     }
 
-    useEffect(() =>{
+    useEffect(() => {
         fetchPokemon();
     }, [])
 
 
-    return(
+    return (
         <>
-           <PokeCard id={pokeId} name={pokeName} height={pokeHeight} weight={pokeWeight} sprite={pokeSprite}></PokeCard>
-            
+            <PokeCard pokemon={pokemon} />
+
         </>
     )
 }
