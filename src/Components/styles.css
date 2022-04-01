@@ -73,3 +73,43 @@
     color: rgb(13, 73, 97);
     font-weight: bold;
 }
+
+.cardSprite{
+    width: 60%;
+    filter: drop-shadow(-5px -5px 5px rgb(118, 214, 238));
+}
+
+.smallText{
+    align-self: center;
+    margin: 10px;
+    font-size: 20px;
+}
+
+.spriteCont{
+    justify-self: center;
+    justify-content: center;
+    width: 50%;
+}
+.sprite{
+    background-color: rgb(217, 235, 241);
+    border-radius: 20px;
+    border-style: dashed;
+    border-color: rgb(118, 214, 238);
+}
+.contain_info{
+    display: flex;
+}
+
+.extrasCont{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.text{
+    font-size: 15px;
+    padding: 10px;
+
+
+    
+}

@@ -10,7 +10,7 @@ function App() {
         <div className='cont'>
           <Routes>
             <Route path="/" element={<PokeList/>} />
-            <Route path="/Pokemon" element={<PokeInfo/>} />
+            <Route path="/Pokemon/:name" element={<PokeInfo/>} />
             <Route path="*" element={<Error/>}/>
           </Routes>
         </div>

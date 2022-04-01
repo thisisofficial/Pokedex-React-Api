@@ -1,23 +1,29 @@
-import	 { Container, Col, Row } from 'react-bootstrap';
 import { useEffect, useState } from 'react';
 import React from 'react';
 import { useParams} from 'react-router-dom';
 import {PokeCard} from '../Components/PokeCard.js'
 
-export const PokeInfo = () =>{
+export function PokeInfo(props){
     let {name} = useParams();
-    let link = "https://pokeapi.co/api/v2/pokemon/"+name;
+    let link = "";   
+        link = "https://pokeapi.co/api/v2/pokemon/"+name;  
 
-    const [pokemon, setPokemon] = useState();
+    const [pokeName, setName] = useState();
+    const [pokeId, setId] = useState();
+    const [pokeWeight, setWeight] = useState();
+    const [pokeHeight, setHeight] = useState();
+    const [pokeSprite, setSprite] = useState();
 
     let type = ['fire'];
     const fetchPokemon = async () => {
         const response = await fetch(link);
-        console.log(response.status);
         const PokemonJson = await response.json();
+        setName(PokemonJson.name);
+        setId(PokemonJson.id);
+        setWeight(PokemonJson.weight);
+        setHeight(PokemonJson.height);
+        setSprite(PokemonJson.sprites['other']['official-artwork'].front_default);
         console.log(PokemonJson);
-        setPokemon(PokemonJson);
-        console.log(pokemon)
     }
 
     useEffect(() =>{
@@ -27,7 +33,7 @@ export const PokeInfo = () =>{
 
     return(
         <>
-           <PokeCard id='0' name='Bulbasaur' weight='100' height='100' sprite='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png' types={type}></PokeCard>
+           <PokeCard id={pokeId} name={pokeName} height={pokeHeight} weight={pokeWeight} sprite={pokeSprite}></PokeCard>
             
         </>
     )

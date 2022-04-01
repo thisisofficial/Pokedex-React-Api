@@ -17,5 +17,6 @@
 .emphasis{
     font-weight: 600;
     font-size: 40px;
-    text-shadow: 0 -10px 10px rgb(101, 186, 207), 0 10px 10px rgb(101, 186, 207);
+    text-shadow: -5px -5px 10px rgb(126, 229, 255), 5px 5px 10px rgb(125, 229, 255);
+    text-transform: capitalize;
 }
