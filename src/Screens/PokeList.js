@@ -11,7 +11,7 @@ export function PokeList(){
     }, [])
 
     const getPokes = async () => {
-        const data = await fetch('https://pokeapi.co/api/v2/pokemon/?limit=151')
+        const data = await fetch('https://pokeapi.co/api/v2/pokemon/?limit=1126')
         const pokemons = await data.json()
         setPokemones(pokemons.results)
     }

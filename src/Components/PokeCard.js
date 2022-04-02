@@ -18,8 +18,9 @@ export function PokeCard({ pokemon }) {
                             <p className='emphasis'>{name}</p>
                         </div>
                         <div className='extrasCont'>
-                            <p className='text'>Weight: {weight} lb</p>
-                            <p className='text'>Height: {height} inch</p>
+                            <p className='pokemon'>Weight: {weight} lb</p>
+                            <p className='smallText'>  |  </p>
+                            <p className='pokemon'>Height: {height} inch</p>
                         </div>
                     </div>
 

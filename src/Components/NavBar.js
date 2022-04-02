@@ -2,6 +2,7 @@ import React from 'react'
 import './styles.css';
 import { Link } from 'react-router-dom';
 import logo from './pokeapi.png';
+import { LoginButton } from './LoginButton';
 
 export function NavBar() {
   return (
@@ -24,7 +25,7 @@ export function NavBar() {
         </div>
 
         <div className='signarea'>
-
+          <LoginButton/>
         </div>
       </div>
     </>

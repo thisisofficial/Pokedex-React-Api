@@ -110,7 +110,52 @@
 .text{
     font-size: 15px;
     padding: 10px;
-
-
+    color:#aaa;
+}
+.login-text{
     
+    text-decoration: none;
+    font-weight: bolder;
+    transition-timing-function: ease;
+}
+.login{
+    background-color: rgb(94, 174, 194);
+    border-style: solid;
+    border-color: rgb(101, 186, 207);
+    border-width:7px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: .5s;
+    border-radius: 20px;
+    width:100%;
+    padding: 0%;
+    color: rgb(122, 228, 255);
+    font-size: 15px;
+}
+
+
+
+.login:hover{
+    background-color: rgb(101, 186, 207);
+    border-color: rgb(94, 174, 194);
+    color: rgb(74, 133, 201);
+    font-size: 18px;
+    border-width: 2px 7px 2px 7px;
+}
+
+.big{
+    width: 100%;
+    justify-self: center;
+}
+
+.container{
+    display: flex;
+}
+
+.button-none{
+    border: none;
+    background: none;
 }
